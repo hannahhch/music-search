@@ -1,14 +1,29 @@
 .wrapper {
   width: 80%;
-  margin: 0 10%;
+  height: 100vh;
+  margin: 5% 10%;
+  background-color: white;
 }
 
 body{
   margin: 0;
+  background-image: url('splatter.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1{
   text-align: center;
+  font-family: 'Rock Salt', cursive;
+  font-size: 3em;
+}
+
+h2{
+  font-family: 'Rock Salt', cursive;
+}
+
+.title{
+  margin-bottom: 25px;
 }
 
 .search-music{
