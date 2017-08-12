@@ -1,0 +1,17 @@
+.wrapper {
+  width: 80%;
+  margin: 0 10%;
+}
+
+body{
+  margin: 0;
+}
+
+h1{
+  text-align: center;
+}
+
+.search-music{
+  width: 80%;
+  margin:  3%;
+}
