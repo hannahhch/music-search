@@ -28,10 +28,12 @@ fetch(searchURL)
       response.json().then(function(data) {
         document.querySelector(".results-wrapper").innerHTML = "";
         for (let i = 0; i < data.results.length; i ++) {
-          let artist = data.results[i].artistName;
+          let track = data.results[i].trackName;
+          let album = data.results[i].collectionName;
           let musicBoxes = document.createElement('div');
           musicBoxes.setAttribute("class", "box");
-          let markup = `<p>${artist}</p>`
+          let markup = `<p>${track}</p>
+          <p>${album}</p>`
 
           musicBoxes.innerHTML = markup
           let box = document.querySelector(".results-wrapper");
