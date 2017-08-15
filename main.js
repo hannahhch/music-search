@@ -22,11 +22,21 @@ fetch(searchURL)
         console.log('Error: ' + response.status);
         return;
         //if response is 200, it worked!
-      } console.log('it worked');
+      } console.log(searchURL);
 
 
       response.json().then(function(data) {
-        document.querySelector
+        document.querySelector(".results-wrapper").innerHTML = "";
+        for (let i = 0; i < data.results.length; i ++) {
+          let artist = data.results[i].artistName;
+          let musicBoxes = document.createElement('div');
+          musicBoxes.setAttribute("class", "box");
+          let markup = `<p>${artist}</p>`
+
+          musicBoxes.innerHTML = markup
+          let box = document.querySelector(".results-wrapper");
+          box.appendChild(musicBoxes);
+        }
       })
 
     }
