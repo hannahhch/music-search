@@ -7,7 +7,7 @@
 
 body{
   margin: 0;
-  background-color: aqua;
+  background-color: #20B2AA;
 }
 
 h1{
@@ -30,7 +30,7 @@ h2{
 }
 
 .box {
-  border: solid 3px aqua;
+  border: solid 3px #20B2AA;
   height: 220px;
   width: 220px;
   margin: 10px;
