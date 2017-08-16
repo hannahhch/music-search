@@ -31,13 +31,16 @@ fetch(searchURL)
           let track = data.results[i].trackName;
           let album = data.results[i].collectionName;
           let art = data.results[i].artworkUrl100;
+          let artist = data.results[i].artistName;
+          let sample = data.results[i].previewUrl;
           let musicBoxes = document.createElement('div');
             musicBoxes.setAttribute("class", "box");
           let markup =
             `
             <p><img src = ${art}></p>
             <p>${track}</p>
-            <p>${album}</p>`
+            <p>${artist}</p>
+            `
 
           musicBoxes.innerHTML = markup
           let box = document.querySelector(".results-wrapper");
