@@ -1,15 +1,13 @@
 .wrapper {
   width: 80%;
-  height: 100vh;
+  height: 100%;
   margin: 5% 10%;
   background-color: white;
 }
 
 body{
   margin: 0;
-  background-image: url('splatter.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: aqua;
 }
 
 h1{
@@ -29,4 +27,22 @@ h2{
 .search-music{
   width: 80%;
   margin:  3%;
+}
+
+.box {
+  border: solid 3px aqua;
+  height: 220px;
+  width: 220px;
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5%;
+  background-color: white;
+}
+
+.results-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
