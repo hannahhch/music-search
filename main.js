@@ -39,8 +39,8 @@ fetch(searchURL)
           let markup =
             `
             <p><img src = ${art}></p>
-            <p>${track}</p>
-            <p>${artist}</p>
+            <p class = 'artistTrack'>${track}</p>
+            <p class = "artistTitle">${artist}</p>
             <p><audio controls = "controls">Play<source src = "${sample}" type = "audio/wav"></audio></p>
              `
 
