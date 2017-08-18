@@ -40,7 +40,8 @@ fetch(searchURL)
             <p><img src = ${art}></p>
             <p>${track}</p>
             <p>${artist}</p>
-            `
+            <p><audio controls = "controls">Play<source src = "${sample}" type = "audio/wav"></audio></p>
+             `
 
           musicBoxes.innerHTML = markup
           let box = document.querySelector(".results-wrapper");
