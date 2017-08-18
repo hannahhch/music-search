@@ -35,6 +35,7 @@ fetch(searchURL)
           let sample = data.results[i].previewUrl;
           let musicBoxes = document.createElement('div');
             musicBoxes.setAttribute("class", "box");
+
           let markup =
             `
             <p><img src = ${art}></p>

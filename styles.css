@@ -1,3 +1,4 @@
+/*content wrapper*/
 .wrapper {
   width: 80%;
   height: 100%;
@@ -5,15 +6,50 @@
   background-color: transparent;
 }
 
+/*logo header*/
+.title {
+  width: 30%;
+  height: 310px;
+  margin-right: 5%;
+  background-color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  font-family: 'Rock Salt', cursive;
+  font-size: 1.5em;
+
+}
+
+/*information box*/
+.info {
+  width: 65%;
+  height: 310px;
+  background-color: rgba(255, 255, 255, 0.85);
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+
+}
+
+/*entire header(logo and info box)*/
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+
+
+
+
+
+
 body{
   margin: 0;
-  background-color: #20B2AA;
+  background-image: url('pattern.jpg');
 }
 
 h1{
-  text-align: center;
-  font-family: 'Rock Salt', cursive;
-  font-size: 3em;
+
 }
 
 h2{
@@ -35,8 +71,7 @@ h2{
   margin: 10px;
   padding: 5px;
   text-align: center;
-  border-radius: 5%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
 .results-wrapper {
