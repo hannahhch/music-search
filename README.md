@@ -1,3 +1,3 @@
-### Music Search Project
+## Music Search Project
 
-# Background pattern from patterncooler.com
+#### Background pattern from patterncooler.com
