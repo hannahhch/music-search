@@ -24,9 +24,27 @@
   height: 310px;
   background-color: rgba(255, 255, 255, 0.85);
   font-family: 'Raleway', sans-serif;
-  font-size: 1.5em;
+  font-size: 1.7em;
   text-align: center;
+}
+/*social icons*/
+.social-info{
+  display: flex;
+  padding: 0 20%;
+  justify-content: space-around;
+}
 
+.social-info a {
+  color: #E50D84;
+}
+
+.social-info a:hover{
+  color:black;
+}
+
+/*spaces out text and social icons*/
+.info-content{
+  padding-top: 10%;
 }
 
 /*entire header(logo and info box)*/
