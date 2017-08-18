@@ -21,7 +21,6 @@ body{
   text-align: center;
   font-family: 'Rock Salt', cursive;
   font-size: 1.5em;
-
 }
 
 /*information box*/
@@ -48,9 +47,10 @@ body{
   color:black;
 }
 
+
 /*spaces out text and social icons*/
 .info-content{
-  padding-top: 10%;
+  padding-top: 8%;
 }
 
 /*entire header(logo and info box)*/
@@ -58,41 +58,59 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 25px;
+  margin-bottom: 5%;
 
 }
 
+/*search box styles*/
+.search{
+  background-color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 5%;
+}
 
+/*audio player styles*/
+.audio-player{
+  background-color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 5%;
+  padding: 2%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+/*search bar text input styling*/
 .search-music{
   width: 80%;
+  height:25px;
+  background:none;
+  border: none;
+  border-bottom: 1px solid black;
   margin:  3%;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  outline:none;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 .box {
   height: 220px;
   width: 220px;
-  margin: 10px;
   padding: 5px;
+  margin-bottom: 5%;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.85);
 }
 
 .results-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
 }
