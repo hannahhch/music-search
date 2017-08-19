@@ -1,19 +1,20 @@
 
 //get the submit button
-let button = document.querySelector('.search-button');
+let button = document.querySelector('form');
 
 //get the iTunes search 'api' and assign key values
 let searchTunes = 'https://itunes.apple.com/search?term=';
 
 //when the button is clicked
-button.addEventListener('click', function() {
+button.addEventListener('submit', function(event) {
+  event.preventDefault();
   //get the value from the search music input box
   var searchBox = document.querySelector('.search-music').value;
   //declare a variable that concatenates the API and search term
   let searchURL = searchTunes + searchBox;
 
-//fetch the concatenation
-fetch(searchURL)
+  //fetch the concatenation
+  fetch(searchURL)
 
   .then(
     //if no response, return the error
@@ -34,20 +35,27 @@ fetch(searchURL)
           let artist = data.results[i].artistName;
           let sample = data.results[i].previewUrl;
           let musicBoxes = document.createElement('div');
-            musicBoxes.setAttribute("class", "box");
+          musicBoxes.setAttribute("class", "box");
 
           let markup =
-            `
-            <p><img src = ${art}></p>
-            <p class = 'artistTrack'>${track}</p>
-            <p class = "artistTitle">${artist}</p>
-            <p><audio controls = "controls">Play<source src = "${sample}" type = "audio/wav"></audio></p>
-             `
+          `
+          <p><img src = ${art} class = "albumPics"></p>
+          <p class = 'artistTrack'>${track}</p>
+          <p class = "artistTitle">${artist}</p>
+          `
 
           musicBoxes.innerHTML = markup
           let box = document.querySelector(".results-wrapper");
           box.appendChild(musicBoxes);
+          let clickPic = musicBoxes.querySelector(".albumPics");
+          clickPic.addEventListener('click', function(event){
+            let getMusic = document.getElementById('audio-player');
+            getMusic.innerHTML = `<audio controls autoplay><source src = "${sample}" type = "audio/wav"></audio>`
+          })
+
+
         }
+
       })
 
     }

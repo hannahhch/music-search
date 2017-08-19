@@ -70,10 +70,15 @@ body{
 }
 
 /*audio player styles*/
-.audio-player{
+#audio-player{
   background-color: rgba(255, 255, 255, 0.85);
   margin-bottom: 5%;
-  padding: 2%;
+  padding: 30px;
+  height:30px;
+}
+
+#audio-player audio{
+  width: 100%;
 }
 
 /*search bar text input styling*/
