@@ -26,6 +26,7 @@ button.addEventListener('submit', function(event) {
       } console.log(searchURL);
 
 
+      //store variable information to put on the page
       response.json().then(function(data) {
         document.querySelector(".results-wrapper").innerHTML = "";
         for (let i = 0; i < data.results.length; i ++) {
@@ -34,9 +35,11 @@ button.addEventListener('submit', function(event) {
           let art = data.results[i].artworkUrl100;
           let artist = data.results[i].artistName;
           let sample = data.results[i].previewUrl;
+          //create a div for each
           let musicBoxes = document.createElement('div');
           musicBoxes.setAttribute("class", "box");
 
+          //define the html for the page
           let markup =
           `
           <p><img src = ${art} class = "albumPics"></p>
@@ -44,12 +47,17 @@ button.addEventListener('submit', function(event) {
           <p class = "artistTitle">${artist}</p>
           `
 
+          //put the markup as html on the page
           musicBoxes.innerHTML = markup
           let box = document.querySelector(".results-wrapper");
           box.appendChild(musicBoxes);
+          //define a variable for the click effect on album pictures
           let clickPic = musicBoxes.querySelector(".albumPics");
+          //add the click event listener to album pictures
           clickPic.addEventListener('click', function(event){
+            //get the audio player
             let getMusic = document.getElementById('audio-player');
+            //store the music url as html on the page
             getMusic.innerHTML = `<audio controls autoplay><source src = "${sample}" type = "audio/wav"></audio>`
           })
 
